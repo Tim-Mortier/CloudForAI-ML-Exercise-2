@@ -112,8 +112,6 @@ def evaluate_model(model, X_test, y_test):
 if __name__ == "__main__":
     file_path = "Titanic-Dataset.csv"
     X, y = preprocess_data(file_path)
-    print(X.isna().sum())
-    print(y.isna().sum())
     random_forest_model, X_test, y_test = train_model(X, y)
     rf_metrics = evaluate_model(random_forest_model, X_test, y_test)
     print(rf_metrics)
